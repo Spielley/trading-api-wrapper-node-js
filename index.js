@@ -5,10 +5,11 @@ const querystring = require('querystring');
 const HttpMethod = {POST:1, GET:2, DELETE:3};
 
 
-const public_api_key = 'MYPUBKEY';
-const private_api_key = 'MYPRIVKEY';
+const public_api_key = 'URpublicKEY';
+const private_api_key = 'URprivateKEY';
 
-const HOST_URL = "https://api.coss.io/v1";
+const HOST_URL = "https://trade.coss.io/c/api/v1";
+const HOST_URL2 = "https://engine.coss.io/api/v1";
 
 //WRAPPER STARTS HERE (Commenting out stuff that coss wrote which should be part of bot.js (the actual trading bot) rather than index.js (the wrapper core functionality))
 let Coss = () => {
@@ -270,7 +271,7 @@ let Coss = () => {
                 return Promise.reject("getMarketPrice(), You must supply a valid trading pair Symbol as a string, e.g. 'eth-btc'!");
             } 
 
-            let url = HOST_URL + "/market-price/" + '?symbol=' + params.Symbol;
+            let url = HOST_URL2 + "/market-price/" + '?symbol=' + params.Symbol;
 
 
             return publicRequest(url);
@@ -283,8 +284,8 @@ let Coss = () => {
             } else if (params.Symbol && typeof params.Symbol !== 'string') {
                 return Promise.reject("getPairDepth(), You must supply a valid trading pair Symbol as a string, e.g. 'eth-btc'!");
             } 
-            console.log(HOST_URL + "/dp/" + '?symbol=' + params.Symbol);
-            let url = HOST_URL + "/dp/" + '?symbol=' + params.Symbol;
+            console.log(HOST_URL2 + "/dp" + '?symbol=' + params.Symbol);
+            let url = HOST_URL2 + "/dp" + '?symbol=' + params.Symbol;
 
 
             return publicRequest(url);
@@ -297,8 +298,8 @@ let Coss = () => {
             } else if (params.Symbol && typeof params.Symbol !== 'string') {
                 return Promise.reject("getMarketSides(), You must supply a valid trading pair Symbol as a string, e.g. 'eth-btc'!");
             } 
-            console.log(HOST_URL + "/dp/" + '?symbol=' + params.Symbol);
-            let url = HOST_URL + "/dp/" + '?symbol=' + params.Symbol;
+            console.log(HOST_URL2 + "/dp/" + '?symbol=' + params.Symbol);
+            let url = HOST_URL2 + "/dp/" + '?symbol=' + params.Symbol;
 
             let pairDepth = await publicRequest(url);
             let marketSides = [[pairDepth.bids[0][0], pairDepth.bids[0][1]],[pairDepth.asks[0][0], pairDepth.asks[0][1]]];
