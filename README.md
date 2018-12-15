@@ -1,4 +1,4 @@
-# Coss-API-Node
+# Coss-API-Node wrapper by cryptodeal - bots by spielley
 
 If you want to see more free bots or upgrades to the existing one, please consider donating. ask spielley on telegram or discord when new stuff is incoming at how many donations.
 ETH/ERC-20 Donation Address for bot builder: 0xD8a6A57133Aba6672f338a988b4D2fE1899A369e
