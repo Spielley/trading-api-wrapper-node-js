@@ -19,7 +19,7 @@ https://nodejs.org/en/download/
 
 * Clone repository
 ```
-$ git clone https://github.com/cryptodeal/Coss-API-Node.git
+$ git clone https://github.com/Spielley/trading-api-wrapper-node-js.git
 
 ```
 * Install dependencies
