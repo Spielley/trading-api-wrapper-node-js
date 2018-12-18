@@ -14,6 +14,8 @@ A modular, open source/free use wrapper written in node.js for the coss.io API. 
 
 #### Installation of wrapper
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 * Ensure you have Node.js installed:
 https://nodejs.org/en/download/
 

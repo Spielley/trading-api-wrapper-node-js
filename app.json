@@ -1,0 +1,51 @@
+{
+  "name": "Trading Api Wrapper Node Js",
+  "description": "TODO: Add a short description about Trading Api Wrapper Node Js",
+  "keywords": [
+    "COSS",
+    "cryptocurrency",
+    "exchange",
+    "API",
+    "bot"
+  ],
+  "addons": [],
+  "repository": "https://github.com/ablebeam/trading-api-wrapper-node-js",
+  "formation": {
+    "web": { "quantity": 0, "size": "free" },
+    "worker": { "quantity": 1, "size": "free" }
+  },
+  "env": {
+    "TRADING_SIZE": {
+      "description": "This is how much tokens you will trade per cycle",
+      "value": "5"
+    },
+    "INTERVAL": {
+      "description": "This is how often your cycles would happen",
+      "value": "600"
+    },
+    "PROFIT_LEVEL": {
+      "description": "Profit level in %",
+      "value": "0.25"
+    },
+    "TRADING_PAIR": {
+      "description": "This is your trading pair",
+      "value": "COSS_ETH"
+    },
+    "COIN_TO_CHECK_WALLET": {
+      "description": "If you run out of this the bot won't buy COSS",
+      "value": "ETH"
+    },
+    "DONT_TRADE_UNDER": {
+      "description": "if your hodlings of coinToCheckWallet fall under this value the bot doesn't trade",
+      "value": "0.1"
+    },
+    "PUBLIC_API_KEY": {
+      "description": "Should be generated in your COSS profile",
+      "value": "URPublicKey"
+    },
+    "PRIVATE_API_KEY": {
+      "description": "Should be generated in your COSS profile",
+      "value": "URPrivateKey"
+    }
+  }
+}

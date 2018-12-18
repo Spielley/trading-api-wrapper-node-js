@@ -5,8 +5,8 @@ const querystring = require('querystring');
 const HttpMethod = {POST:1, GET:2, DELETE:3};
 
 
-const public_api_key = 'URpublicKEY';
-const private_api_key = 'URprivateKEY';
+const public_api_key = process.env.PUBLIC_API_KEY;
+const private_api_key = process.env.PRIVATE_API_KEY;
 
 const HOST_URL = "https://trade.coss.io/c/api/v1";
 const HOST_URL2 = "https://engine.coss.io/api/v1";
