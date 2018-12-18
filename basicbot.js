@@ -2,11 +2,11 @@ const Coss = require('./index')();
 
 base = {} //database object
 
-tradingsize = 2 // change this to change lotsize
-interval =  60 // interval in seconds , 1 loop for each interval
-profitLevel = 1 // profit level in %
-tradingpair = 'COSS_ETH' // this is your trading pair
-coinToCheckWallet = 'ETH' // if you run out of this the bot won't buy COSS 
+tradingsize = parseFloat(process.env.TRADING_SIZE)
+interval =  parseInt(process.env.INTERVAL)
+profitLevel = parseFloat(process.env.PROFIT_LEVEL)
+tradingpair = process.env.TRADING_PAIR
+coinToCheckWallet = process.env.COIN_TO_CHECK_WALLET
 
 
 const init = async () => {
