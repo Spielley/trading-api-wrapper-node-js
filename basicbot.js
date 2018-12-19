@@ -2,11 +2,13 @@ const Coss = require('./index')();
 
 base = {} //database object
 
-tradingsize = parseFloat(process.env.TRADING_SIZE)
-interval =  parseInt(process.env.INTERVAL)
-profitLevel = parseFloat(process.env.PROFIT_LEVEL)
-tradingpair = process.env.TRADING_PAIR
-coinToCheckWallet = process.env.COIN_TO_CHECK_WALLET
+tradingsize = 2 // change this to change lotsize
+interval =  60 // interval in seconds , 1 loop for each interval
+profitLevel = 1 // profit level in %
+tradingpair = 'COSS_ETH' // this is your trading pair
+coinToCheckWallet = 'ETH' // if you run out of this the bot won't buy COSS 
+dontTradeUnder = 0.2 // if your hodlings of coinToCheckWallet fall under this value the bot doesn't trade
+
 
 
 const init = async () => {
@@ -184,7 +186,7 @@ const main = async () => {
 		// insert technical analysis (TA)
 		//change bull or bearsignal to true if ta signals
 	// update depth for each pair
-		await walletUpdate();
+	await walletUpdate();
 	depthUpdate();
 	
 	 }catch (error) {console.log(error)}
@@ -197,8 +199,8 @@ const tradinglogic = async (pair) => {
 			console.log('points to add above buy price: '+absolutediffinpoints);
 			test = base[pair]['ask'] * (10** base['pricelimit'][pair]/90) 
 			console.log(test)
-			console.log(base[pair]['ask'] * tradingsize+' <? '+ base['wallet'][coinToCheckWallet])
-		if(base[pair]['ask'] * tradingsize < base['wallet'][coinToCheckWallet])// points being 2% spread < actual spread => bigger then 0.2% spread
+			console.log(dontTradeUnder+' <? '+ base['wallet'][coinToCheckWallet])
+		if(dontTradeUnder < base['wallet'][coinToCheckWallet])// points being 2% spread < actual spread => bigger then 0.2% spread
 		{
 			//calculate spots for placement and place
 			mid = Math.round(absolutediffinpoints/2)
