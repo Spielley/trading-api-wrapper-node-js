@@ -186,6 +186,7 @@ const main = async () => {
 		// insert technical analysis (TA)
 		//change bull or bearsignal to true if ta signals
 	// update depth for each pair
+		await walletUpdate();
 	depthUpdate();
 	
 	 }catch (error) {console.log(error)}
