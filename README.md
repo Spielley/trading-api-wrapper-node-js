@@ -60,7 +60,7 @@ For any inquiries about use, please contact the developer: telegram @cryptodeal2
 #### Installation of basic bot (spielley)
 1. Run through wrapper instructions
 2. optional customise trading settings in the bot file
-3. Run basicbotv02.js by executing the command 'node basicbot.js'
+3. Run botv2.js by executing the command 'node basicbot.js'
 
 Thank you for trading
 welcome to the coss trading movement.
