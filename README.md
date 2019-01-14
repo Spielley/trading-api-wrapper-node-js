@@ -6,6 +6,7 @@ ETH/ERC-20 Donation Address for bot builder: 0x57b328E48b1EeCFb81C21E3A7cC72655C
 
 ETH/ERC-20 Donation Address for wrapper builder: 0xD8a6A57133Aba6672f338a988b4D2fE1899A369e
 
+ETH/ERC-20 Donation Address for implementation of heroku oneclickinstall solution: (viktors address)
 
 #### About Coss-API-Node
 
@@ -61,6 +62,13 @@ For any inquiries about use, please contact the developer: telegram @cryptodeal2
 1. Run through wrapper instructions
 2. optional customise trading settings in the bot file
 3. Run botv2.js by executing the command 'node botv2.js'
+
+#### Installation of complexer averagedown bot (spielley)
+1. Run through wrapper instructions
+2. optional customise trading settings in the bot file
+3. Run averagedown.js by executing the command 'node botv2.js'
+or install this one with the heroku oneclck solution:
+(button here)
 
 Thank you for trading
 welcome to the coss trading movement.
