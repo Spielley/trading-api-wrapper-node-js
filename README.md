@@ -66,7 +66,8 @@ For any inquiries about use, please contact the developer: telegram @cryptodeal2
 #### Installation of complexer averagedown bot (spielley)
 1. Run through wrapper instructions
 2. optional customise trading settings in the bot file
-3. Run averagedown.js by executing the command 'node botv2.js'
+3. Run averagedown.js by executing the command 'node averagedown.js.js'
+
 or install this one with the heroku oneclck solution:
 (button here)
 
