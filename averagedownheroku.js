@@ -2,15 +2,15 @@ const Coss = require('./index')();
 
 base = {} //database object
 
-tradingsize = 100 // change this to change lotsize per trade
-interval =  60 // interval in seconds , 1 loop for each interval. don't change unless it's over 60.
-profitLevel = 0.5 // profit level in % - sells acquired lots when this % above averagedprice 
-tradingpair = 'COSS_ETH' // this is your trading pair
-coinToCheckWallet = 'ETH' // if you run out of this the bot won't buy COSS 
-dontTradeUnder = 0.2 // if your hodlings of coinToCheckWallet fall under this value the bot doesn't trade
-averagedownlevel = 95 // when price drops below this % of averagedprice a buy order is sent
-averagedlots = 0 // change this to run from previous session params
-averagedprice = 0 // change this to run from previous session params
+tradingsize = parseFloat(process.env.TRADING_SIZE)
+interval =  parseInt(process.env.INTERVAL)
+profitLevel = parseFloat(process.env.PROFIT_LEVEL)
+tradingpair = process.env.TRADING_PAIR
+coinToCheckWallet = process.env.COIN_TO_CHECK_WALLET
+dontTradeUnder = parseFloat(process.env.DONT_TRADE_UNDER)
+averagedownlevel = parseFloat(process.env.AVERAGE_DOWN_LEVEL)
+averagedlots = parseFloat(process.env.AVERAGED_LOTS)
+averagedprice = parseFloat(process.env.AVERAGED_PRICE)
 
 
 const init = async () => {

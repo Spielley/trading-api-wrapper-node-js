@@ -46,6 +46,22 @@
     "PRIVATE_API_KEY": {
       "description": "Should be generated in your COSS profile",
       "value": "URPrivateKey"
+    },
+    "AVERAGE_DOWN_LEVEL": {
+      "description": "(ONLY FOR AVERAGE_DOWN BOT_STRATEGY) When price drops below this % of averagedprice a buy order is sent",
+      "value": "95"
+    },
+    "AVERAGED_LOTS": {
+      "description": "(ONLY FOR AVERAGE_DOWN BOT_STRATEGY) Change this to run from previous session params",
+      "value": "0"
+    },
+    "AVERAGED_PRICE": {
+      "description": "(ONLY FOR AVERAGE_DOWN BOT_STRATEGY) Change this to run from previous session params",
+      "value": "0"
+    },
+    "BOT_STRATEGY": {
+      "description": "Choose from BASIC or AVERAGE_DOWN",
+      "value": "BASIC"
     }
   }
 }
